@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Code Quiz</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/style.css">
-  <title>Code Quiz</title>
-</head>
-
-<body>
-  <div class="header">
-    <button onclick="game.viewHighScores()" type="button">View High Scores</button>
-    <div id="timerContainer">Time: <span id="timer">75</span>s</div>
-  </div>
-<div>
-  <button class = "startbutton" onclick="game.startGame()">Start Quiz</button>
-</div>
-  <div class="question">
-  <div id="openingpage" class="openingpage">
-    <h1>Roller Derby Code Quiz</h1>
-    <h3>🛼 Take this quiz to see how much you know about roller derby 🛼</h3>
-  </div>
-    <div class="questiontext hidden" id="questiontext" >
-      Sample question  
-  </div>
-    <div class="options hidden" id="options">
-      <button class="answer" id="answer1" onclick="game.answerQuestion(this.id)">Option</button>
-      <button class="answer" id="answer2" onclick="game.answerQuestion(this.id)">Option</button>
-      <button class="answer" id="answer3" onclick="game.answerQuestion(this.id)">Option</button>
-      <button class="answer" id="answer4" onclick="game.answerQuestion(this.id)">Option</button>
-
+  <body>
+    <div class="header">
+      <button onclick="game.viewHighScores()" type="button">
+        View High Scores
+      </button>
+      <div id="timerContainer">Time: <span id="timer">75</span>s</div>
     </div>
-    <div class="donescreen hidden" id="donescreen">
-      <p>All done!</p>
-      <p>Your score is:<span id="finalscore">0</span>.</p>
-      <label for="initials">Enter Initials</label>
-      <input type="text" id="initials">
-      <button onclick="game.submitHighScore()" class="submithighscore">Sumbit</button>
+    <div>
+      <button class="startbutton" onclick="game.startGame()">Start Quiz</button>
     </div>
-    <div class="highscores hidden" id="highscores">
-      <p>Highscores</p>
-      <div id="highscorescontainer"></div>
-      <button onclick="game.startOver()">Go back</button>
-      <button onclick="game.resethighscores()">Clear highscores</button>
+    <div class="question">
+      <div id="openingpage" class="openingpage">
+        <h1>Roller Derby Code Quiz</h1>
+        <h3>
+          🛼 Take this quiz to see how much you know about roller derby 🛼
+          For each incorrect answer you will be penalized 5 seconds! 
+        </h3>
+      </div>
+      <div class="questiontext hidden" id="questiontext">Sample question</div>
+      <div class="options hidden" id="options">
+        <button
+          class="answer"
+          id="answer1"
+          onclick="game.answerQuestion(this.id)"
+        >
+          Option
+        </button>
+        <button
+          class="answer"
+          id="answer2"
+          onclick="game.answerQuestion(this.id)"
+        >
+          Option
+        </button>
+        <button
+          class="answer"
+          id="answer3"
+          onclick="game.answerQuestion(this.id)"
+        >
+          Option
+        </button>
+        <button
+          class="answer"
+          id="answer4"
+          onclick="game.answerQuestion(this.id)"
+        >
+          Option
+        </button>
+      </div>
+      <div class="donescreen hidden" id="donescreen">
+        <p>All done!</p>
+        <p>Your score is:<span id="finalscore">0</span>.</p>
+        <label for="initials">Enter Initials</label>
+        <input type="text" id="initials" />
+        <button onclick="game.submitHighScore()" class="submithighscore">
+          Sumbit
+        </button>
+      </div>
+      <div class="highscores hidden" id="highscores">
+        <p>Highscores</p>
+        <div id="highscorescontainer"></div>
+        <button onclick="game.startOver()">Go back</button>
+        <button onclick="game.resethighscores()">Clear highscores</button>
+      </div>
     </div>
-  </div>
-  <div class="footer">
-    <div class="questionnumber"></div>
-    <div class="results"></div>
-    <div class="icon"></div>
-    <div class="quizscore"></div>
-  </div>
-  <script src="assets/script.js"></script>
-</body>
-
+    <div class="footer">
+      <div class="quizscore"></div>
+    </div>
+    <script src="assets/script.js"></script>
+  </body>
 </html>

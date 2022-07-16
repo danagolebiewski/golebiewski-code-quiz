@@ -1,13 +1,20 @@
 # golebiewski-code-quiz
 
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
+# Challenge 2 - Portfolio
+
+By Dana Golebiewski
+
+## Description 
+For this challenge, I created a code quiz with a timer. For each incorrect answer, 5 seconds will be deducted. You can view the high score, clear the high score, and be taken to the high scores page from a button. 
+
+
+## Built With 
+HTML, CSS, JavaScript
+
+## Link to final version 
+
+[Site Link] (https://danagolebiewski.github.io/golebiewski-code-quiz/)
+
+## Website Preview
+
+![Website Preview](assets/images/website-preview.png)
